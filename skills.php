@@ -12,15 +12,12 @@
     <script type='text/javascript' >
                 var today = new Date();
                 var year = today.getFullYear();
-                var setupYr = 2016;
-                var addedYrs = year-setupYr;
-                console.log(addedYrs);
+//                var setupYr = 2016;
+//                var addedYrs = year-setupYr;
+//                console.log(addedYrs);
     </script>
-                
-    
 
     <title>Peter Wingard Senior Software Engineer</title>
-        
 
     <!-- Bootstrap core CSS -->
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -46,25 +43,24 @@
         <h3 class="text-muted">Skills</h3>
       </div>
 
-
-
       <div class="row marketing">
         <div class="col-lg-6">
         <h4>Ad System's Backend</h4>
             <p>Salesforce, DFP, Operative, Creatives, Targeting, Data mining, etc. > 3 yrs exp</p>
           <h4>PHP/MySQL</h4>
           <!--addedYrs-->
-            <p>10 yrs exp backend</p>
+            <p><?php echo calYrsSince(2006);?> yrs exp</p>
           <h4>Javascript</h4>
-            <p>jQuery: 6 yrs exp<br />
-                Ajax: <?php echo "4";?> yrs exp<br />
+            <p>
+                JS: <?php echo calYrsSince(2011);?> yrs exp<br />
+                jQuery: <?php echo calYrsSince(2012);?> yrs exp<br />
+                Ajax: <?php echo calYrsSince(2012);//initially 4?> yrs exp<br />
                 AngularJS: 1 yrs exp
             </p>
           <h4>HTML/CSS</h4>
-            <p>Obviously <br />> 10 yrs exp</p>           
+            <p> > 10 yrs exp</p>           
           <h4>Bootstrap</h4>
-            <p>Obviously :)  <br />
-                2 yrs exp</p>
+            <p> <?php echo calYrsSince(2014);?> yrs exp</p>
             <h4>Automated Testing</h4>
             <p>Facebook’s PHP WebDriver<br />Selenium server<br />PHPUnit<br /> 
                 BrowserStack<br />PhantomJS<br />Appium<br />1 yr exp
@@ -72,7 +68,7 @@
         </div>
         <div class="col-lg-6">
           <h4>LAMP</h4>
-            <p>Full stack: 4 yrs exp<br />
+            <p>Full stack: <?php echo calYrsSince(2012);?> yrs exp<br />
                 (Linux, Apache, MySQL, PHP) </p>
           <h4>Salesforce</h4>
             <p> GUI, API: 3 yrs exp</p>
@@ -80,22 +76,16 @@
             <p>DoubleClick For Publishers (Google): <br />
                 API: 2 yrs exp</p>
           <h4>APIs</h4>
-            <p>Variety of APIs: 8 yrs exp (Google, Twitter, PayPal, Operative, etc.)<br />
+            <p>Variety of APIs: <?php echo calYrsSince(2008);?> yrs exp (Google, Twitter, PayPal, Operative, etc.)<br />
             Creating APIs: 3 yrs exp</p>
             <h4>Other</h4>
-            <p>Git: 3 yrs exp<br />Operative API: 3 yrs exp<br />Terminal: 4 yr exp<br />Netbeans<br />PhpMyAdmin<br />Filezilla<br />SquelPro<br />Firebug<br />Chrome Dev Tools<br />Yada Yada
+            <p>Git: <?php echo calYrsSince(2012);?> yrs exp<br />Operative API: 3 yrs exp<br />Terminal: <?php echo calYrsSince(2012);?> yr exp<br />Netbeans<br />PhpMyAdmin<br />Filezilla<br />SquelPro<br />Firebug<br />Chrome Dev Tools...
             </p>
             <h4>Also Rans</h4>
-            <p>JSOM, XML, DOM, Objects<br />MVC, yii, OOP<br />Wordpress, SlickGrid, ad systems<br />and more Yada Yada</p>
+            <p>JSOM, XML, DOM, Objects<br />MVC, yii, OOP<br />Wordpress, SlickGrid, ad systems<br />and more...</p>
             
         </div>
       </div>
-
-<!--        <p class="col-md-6" >PHP/MySQL<br />Javascript, jQuery, Ajax, AngularJS<br />Linux, LAMP, Full Stack
-            <br />Salesforce, DoubleClick for Publishers (Google's DFP) APIs</p>-->
-        
-        
-        
         
       <footer class="footer">
 
@@ -117,3 +107,12 @@
     </div> <!-- /container -->
   </body>
 </html>
+<?php
+
+function calYrsSince($yrs){
+   $curYr=date("Y");
+   return $curYr-$yrs;
+}
+?>
+
+
